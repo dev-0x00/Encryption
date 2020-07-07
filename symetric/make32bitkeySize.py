@@ -13,19 +13,21 @@ def generateKey():
     
 
 
-#def saveKey():
-#    keyFile = 'secrete.key'
-#    with open(keyFile, 'wb') as key:
-#        secrete = generateKey()
-#        key.write(secrete)
-#        key.close()
+def saveKey():
+    keyFile = 'secrete.key'
+    with open(keyFile, 'wb') as key:
+        secrete = base64.b64encode(generateKey())
+        key.write(secrete)
+        key.close()
 
     return 0
 
 def main():
     print("[*]Generating secrete key... ")
     time.sleep(2)
-    print(base64.b64encode(generateKey()))
+    saveKey()
+    time.sleep(2)
+    print("[*]Key Genrated succesfully.")
 
 #incase the file is not called as a module
 if __name__ == '__main__':

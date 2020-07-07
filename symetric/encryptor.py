@@ -1,6 +1,7 @@
 import os
 import random
 import struct
+import time
 
 from Crypto.Cipher import AES
 
@@ -41,7 +42,15 @@ def main():
     key = raw_input('[*]Enter the key file: ')
     with open(key, 'rb') as secrete:
         content = secrete.read()
-        encryptFile(content, 'plain.txt', 'plain.txt.enc')
+        print("[INFO] keys veryfied...")
+        time.sleep(2)
+        plainFile = raw_input('[*]Enter the file to Encrypt: ')
+        cipherText = plainFile + ".enc"
+        time.sleep(2)
+        print("[INFO] Encrypting file. this will take a minuite...")
+        encryptFile(content, plainFile ,cipherText)
+        time.sleep(2)
+        print("[INFO] file encrypted and saved in " + cipherText)
         secrete.close()
 
 #incase the file is n

@@ -29,7 +29,14 @@ def main():
     key = raw_input('[*]Enter the key file: ')
     with open(key, 'rb') as secrete:
         content = secrete.read()
-        decryptCipher(content, 'plain.txt.enc', 'plain.txt')
+        cipherText = raw_input('[*]Enter the file to decrypt: ')
+        plain = cipherText.split('.')
+        plainText = []
+        plainText.append(plain[0])
+        plainText.append('.')
+        plainText.append(plain[1])
+        plainText = ''.join(plainText)
+        decryptCipher(content, cipherText, plainText)
         secrete.close()
 
 #incase the file is not run a module
