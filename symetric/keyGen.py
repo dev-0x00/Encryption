@@ -9,16 +9,14 @@ def generateKey():
     secreteKey = list(str(secreteKey))
     secrete = secreteKey[:16]
 
-    return ''.join(secrete)
+    return ''.join(secrete).encode()
     
 
 
-def saveKey():
-    keyFile = 'secrete.key'
-    with open(keyFile, 'wb') as key:
-        secrete = base64.b64encode(generateKey())
-        key.write(secrete)
-        key.close()
+def saveKey(key, keyFile):
+    with open(keyFile, 'wb') as secreteKey:
+        secreteKey.write(key)
+        secreteKey.close()
 
     return 0
 
@@ -32,3 +30,6 @@ def main():
 #incase the file is not called as a module
 if __name__ == '__main__':
     main()
+
+
+

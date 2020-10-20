@@ -12,7 +12,7 @@ def decryptCipher(key, cipherfile, plainfile, chunksize=64*1024):
     with open(cipherfile, 'rb') as  cipher:
         originalSize = struct.unpack('<Q', cipher.read(struct.calcsize('Q')))[0]
         iv = cipher.read(16)
-        decryptor = AES.new(key, AES.MODE_CBC, iv)
+        decryptor = AES.new(key.decode(), AES.MODE_CBC, iv)
 
         with open(plainfile, 'wb') as  plaintext:
             while True:
@@ -26,10 +26,10 @@ def decryptCipher(key, cipherfile, plainfile, chunksize=64*1024):
 def main():
 
     #key = b'bdc635k2-283d-4a2c-a477-339ea866'
-    key = raw_input('[*]Enter the key file: ')
+    key = input('[*]Enter the key file: ')
     with open(key, 'rb') as secrete:
         content = secrete.read()
-        cipherText = raw_input('[*]Enter the file to decrypt: ')
+        cipherText = input('[*]Enter the file to decrypt: ')
         plain = cipherText.split('.')
         plainText = []
         plainText.append(plain[0])
@@ -38,6 +38,7 @@ def main():
         plainText = ''.join(plainText)
         decryptCipher(content, cipherText, plainText)
         secrete.close()
+        
 
 #incase the file is not run a module
 if __name__ == '__main__':
