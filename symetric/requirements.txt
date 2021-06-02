@@ -152,7 +152,7 @@ tornado==5.1.1
 traitlets==4.3.3
 tzlocal==2.1b1
 unattended-upgrades==0.1
-urllib3==1.25.9
+urllib3==1.26.5
 urwid==2.1.0
 vboxapi==1.0
 vinetto==0.8.0
