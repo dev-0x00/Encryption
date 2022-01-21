@@ -54,7 +54,7 @@ hyperframe==5.2.0
 icalendar==4.0.3
 idna==2.10
 IPy==1.0
-ipython==7.18.1
+ipython==7.31.1
 ipython-genutils==0.2.0
 iso8601==0.1.12
 jedi==0.17.2
