@@ -73,7 +73,7 @@ MarkupSafe==1.1.1
 matplotlib==3.2.2
 maxminddb==1.4.1
 mercurial==5.5
-mitmproxy==4.0.4
+mitmproxy==8.0.0
 msgpack==0.6.2
 mysqlclient==1.4.4
 nbformat==5.0.7
