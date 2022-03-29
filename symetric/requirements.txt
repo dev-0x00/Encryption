@@ -79,7 +79,7 @@ mysqlclient==1.4.4
 nbformat==5.0.7
 numpy==1.18.4
 olefile==0.46
-paramiko==2.6.0
+paramiko==2.10.1
 parso==0.7.1
 passlib==1.7.2
 patator==0.7
