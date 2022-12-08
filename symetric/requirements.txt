@@ -14,7 +14,7 @@ Brlapi==0.7.0
 Brotli==1.0.7
 cached-property==1.5.1
 capstone==3.0.5
-certifi==2020.4.5.1
+certifi==2022.12.7
 chardet==3.0.4
 chrome-gnome-shell==0.0.0
 Click==7.0
